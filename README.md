@@ -43,5 +43,67 @@ Alternatively, you can install them manually:
 pip install arxiv tenacity pydantic httpx python-dateutil google-genai openai markdown weasyprint
 ```
 
+🔑 Environment Variables
+
+You must set the following environment variables. The system will use the Gemini API key as the primary choice and fall back to the OpenAI API key if the Gemini key is not available.
+
+🔐 EMAIL_PASSWORD — Your email application password.
+
+☄️ GEMINI_API_KEY — Your Google Gemini API key.
+
+🤖 OPENAI_API_KEY — Your OpenAI API key.
+
+Linux/macOS
+echo 'export EMAIL_PASSWORD="your-app-password"' >> ~/.bashrc
+echo 'export GEMINI_API_KEY="your-gemini-key"' >> ~/.bashrc
+echo 'export OPENAI_API_KEY="your-openai-key"' >> ~/.bashrc
+source ~/.bashrc
+
+Windows PowerShell
+$Env:EMAIL_PASSWORD = "your-app-password"
+$Env:GEMINI_API_KEY = "your-gemini-key"
+$Env:OPENAI_API_KEY = "your-openai-key"
+
+.env File
+EMAIL_PASSWORD=your-app-password
+GEMINI_API_KEY=your-gemini-key
+OPENAI_API_KEY=your-openai-key
+
+🚀 Usage
+▶️ Single Run
+python arxiv_digest.py
+
+🔁 Daemon Mode
+python arxiv_digest.py --daemon
+
+
+You can adjust the schedule in config.py:
+
+DAEMON_CONFIG = {
+    "run_hour": 4,
+    "run_minute": 0,
+    "run_second": 0,
+}
+
+🛡️ Handling API Errors
+
+The script is built with robust error handling to deal with common issues like 429 Too Many Requests errors, which can occur when API usage is too high. The built-in exponential backoff and fallback strategy will automatically pause and retry requests, ensuring your daily digest runs successfully. If an API key or service is unavailable, the system will seamlessly switch to a working alternative.
+
+🧹 Cache and Cleanup
+
+The system automatically manages old files and caches to save disk space.
+
+🗂️ Cache Retention: 14 days (configurable in config.py)
+
+📑 Output Retention: 30 days (configurable in config.py)
+
+🗃️ The SQLite database is periodically vacuumed to free up space.
+
+📡 API Status
+
+🔵 OpenAI Status
+
+🟢 Google AI Studio Status
+
 
 
