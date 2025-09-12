@@ -7,11 +7,10 @@ This project, developed by **Vibe Coding**, automates the process of finding rel
 
 ## 🖼️ Screenshot
 
------
+
 
 ## 🎯 Scoring Mechanism
-
-Our scoring system prioritizes **verifiable signals** over subjective descriptions.
+This section explains how papers are evaluated and what signals determine whether they are included in the digest. Our scoring system prioritizes **verifiable signals** over subjective descriptions.
 
 - 🏛️ **Author Affiliation (Primary Signal):** Papers from organizations with a proven track record of publishing highly-cited and impactful research receive a significant score bonus. The system recognizes different levels of contributions based on the organization's historical output, applying varying bonus scores to reflect their influence in the field. The bonus decays over time and has a cap to prevent score inflation.
 
