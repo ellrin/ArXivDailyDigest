@@ -36,6 +36,9 @@ You can install all required dependencies using `pip`:
 ```bash
 pip install -r requirements.txt
 
+Alternatively, you can install them manually:
+
+pip install arxiv tenacity pydantic httpx python-dateutil google-genai openai markdown weasyprint
 
 
 
