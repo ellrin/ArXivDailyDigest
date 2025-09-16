@@ -19,7 +19,7 @@ ArXiv Daily Digest by **Vibe Coding**. An automated system for discovering, scor
 
 ## 🖼️ Screenshot
 
-[Insert your screenshot here: docs/screenshot.png]
+[Insert your screenshot here: fig.png]
 
 ---
 
