@@ -124,7 +124,9 @@ The script uses exponential backoff and model fallback to handle common failures
 The system manages caches and outputs to save space.
 
 🗂️ Cache retention: 14 days (configurable in config.py)
+
 📑 Output retention: 30 days (configurable in config.py)
+
 🗃️ Periodic SQLite VACUUM to reclaim storage
 
 ---
