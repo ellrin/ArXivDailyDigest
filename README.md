@@ -10,15 +10,6 @@
 ![Screenshot](fig.png)
 
 
-## 📋 Table of Contents
-- 🖼️ Screenshot
-- 🎯 Scoring Mechanism
-- ⚙️ Installation & Setup
-- 🚀 Usage
-- 🛡️ Handling API Errors
-- 🧹 Cache & Cleanup
-- 📡 API Status
-
 ## 🎯 Scoring Mechanism
 
 This system favors verifiable signals over vague prose. Papers must pass minimum thresholds
