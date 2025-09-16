@@ -60,26 +60,35 @@ pip install arxiv tenacity pydantic httpx python-dateutil google-genai openai ma
 The system prefers Gemini first, then falls back to OpenAI if Gemini is unavailable.
 
 EMAIL_PASSWORD = your-app-password
+
 GEMINI_API_KEY = your-gemini-key
+
 OPENAI_API_KEY = your-openai-key
 
 ### Linux/macOS
 
 echo 'export EMAIL_PASSWORD="your-app-password"' >> ~/.bashrc
+
 echo 'export GEMINI_API_KEY="your-gemini-key"' >> ~/.bashrc
+
 echo 'export OPENAI_API_KEY="your-openai-key"' >> ~/.bashrc
+
 source ~/.bashrc
 
 ### Windows PowerShell
 
 $Env:EMAIL_PASSWORD = "your-app-password"
+
 $Env:GEMINI_API_KEY = "your-gemini-key"
+
 $Env:OPENAI_API_KEY = "your-openai-key"
 
 ### .env File
 
 EMAIL_PASSWORD=your-app-password
+
 GEMINI_API_KEY=your-gemini-key
+
 OPENAI_API_KEY=your-openai-key
 
 ---
@@ -87,13 +96,13 @@ OPENAI_API_KEY=your-openai-key
 ## 🚀 Usage
 
 ### ▶️ Single Run
-
+```
 python arxiv_digest.py
-
+```
 ### 🔁 Daemon Mode
-
+```
 python arxiv_digest.py --daemon
-
+```
 ### ⏱️ Schedule (config.py)
 
 DAEMON_CONFIG = {
