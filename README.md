@@ -4,6 +4,12 @@ ArXiv Daily Digest by **Vibe Coding**. An automated system for discovering, scor
 
 > Fetch the latest arXiv papers, filter by your interests, score with LLMs, and deliver a clean daily digest in Markdown and PDF. If no papers qualify, a short notification email is sent.
 
+
+
+## 🖼️ Screenshot
+
+![Screenshot](fig.png)
+
 ---
 
 ## 📋 Table of Contents
@@ -14,14 +20,6 @@ ArXiv Daily Digest by **Vibe Coding**. An automated system for discovering, scor
 - 🛡️ Handling API Errors
 - 🧹 Cache & Cleanup
 - 📡 API Status
-
----
-
-## 🖼️ Screenshot
-
-![Screenshot](fig.png)
-
----
 
 ## 🎯 Scoring Mechanism
 
