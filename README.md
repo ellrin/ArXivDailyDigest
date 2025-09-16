@@ -49,12 +49,9 @@ for evidence, novelty, and overall score to enter the digest.
 
 ## ⚙️ Installation & Setup
 
-### 📦 Dependencies
-
-pip install -r requirements.txt
-
-# Or install manually:
+```
 pip install arxiv tenacity pydantic httpx python-dateutil google-genai openai markdown weasyprint
+```
 
 ---
 
