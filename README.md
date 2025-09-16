@@ -1,8 +1,7 @@
 # ArXivDailyDigest
 
-ArXiv Daily Digest by **Vibe Coding**. An automated system for discovering, scoring, and delivering daily research updates with multi-LLM support.
+**ArXiv Daily Digest** by **Vibe Coding** is an automated system for discovering, scoring, and delivering daily research updates with multi-LLM support. It fetches the latest arXiv papers, filters them by users' chosen interests, scores them with LLMs, and compiles a clean daily digest in both Markdown and PDF. If no papers meet the criteria, users can instead receive a short notification email. The figure below shows an example of the actual output. When running in daemon mode, users can schedule a daily delivery at their specified time, receiving an email that contains both the PDF and Markdown versions of the digest.
 
-> Fetch the latest arXiv papers, filter by your interests, score with LLMs, and deliver a clean daily digest in Markdown and PDF. If no papers qualify, a short notification email is sent.
 
 
 
