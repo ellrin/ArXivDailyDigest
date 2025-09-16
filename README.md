@@ -9,7 +9,6 @@
 
 ![Screenshot](fig.png)
 
----
 
 ## 📋 Table of Contents
 - 🖼️ Screenshot
@@ -44,7 +43,6 @@ for evidence, novelty, and overall score to enter the digest.
 ✅ Decision Rule
     A paper is included in the digest only if it passes evidence and novelty thresholds and reaches a sufficient overall score.
 
----
 
 ## ⚙️ Installation & Setup
 
@@ -52,7 +50,6 @@ for evidence, novelty, and overall score to enter the digest.
 pip install arxiv tenacity pydantic httpx python-dateutil google-genai openai markdown weasyprint
 ```
 
----
 
 ## 🔑 Environment Variables
 
@@ -90,7 +87,7 @@ GEMINI_API_KEY=your-gemini-key
 
 OPENAI_API_KEY=your-openai-key
 
----
+
 
 ## 🚀 Usage
 
@@ -110,13 +107,13 @@ DAEMON_CONFIG = {
     "run_second": 0,
 }
 
----
+
 
 ## 🛡️ Handling API Errors
 
 The script uses exponential backoff and model fallback to handle common failures such as **429 Too Many Requests**. When a key or service is unavailable, it automatically pauses, retries, or switches to a working provider.
 
----
+
 
 ## 🧹 Cache & Cleanup
 
@@ -128,7 +125,7 @@ The system manages caches and outputs to save space.
 
 🗃️ Periodic SQLite VACUUM to reclaim storage
 
----
+
 
 ## 📡 API Status
 
