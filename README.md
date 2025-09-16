@@ -1,6 +1,7 @@
 # ArXivDailyDigest
 
-**ArXiv Daily Digest** by **Vibe Coding** is an automated system for discovering, scoring, and delivering daily research updates with multi-LLM support. It fetches the latest arXiv papers, filters them by users' chosen interests, scores them with LLMs, and compiles a clean daily digest in both Markdown and PDF. If no papers meet the criteria, users can instead receive a short notification email. The figure below shows an example of the actual output. When running in daemon mode, users can schedule a daily delivery at their specified time, receiving an email that contains both the PDF and Markdown versions of the digest.
+**ArXiv Daily Digest** by **Vibe Coding** is an automated system for discovering, scoring, and delivering daily research updates with multi-LLM support. It fetches the latest arXiv papers, filters them by users' chosen interests, scores them with LLMs, and compiles a clean daily digest in both Markdown and PDF. The system uses the Gemini API for paper score ranking. If no papers meet the criteria, users can instead receive a short notification email. The figure below shows an example of the actual output. When running in daemon mode, users can schedule a daily delivery at their specified time, receiving an email that contains both the PDF and Markdown versions of the digest.
+
 
 
 
@@ -44,39 +45,26 @@ pip install arxiv tenacity pydantic httpx python-dateutil google-genai openai ma
 
 ## 🔑 Environment Variables
 
-The system prefers Gemini first, then falls back to OpenAI if Gemini is unavailable.
+The Gemini API is used to evaluate and rank papers.
 ```
 EMAIL_PASSWORD = your-app-password
-
 GEMINI_API_KEY = your-gemini-key
-
-OPENAI_API_KEY = your-openai-key
 ```
 ### Linux/macOS
 ```
 echo 'export EMAIL_PASSWORD="your-app-password"' >> ~/.bashrc
-
 echo 'export GEMINI_API_KEY="your-gemini-key"' >> ~/.bashrc
-
-echo 'export OPENAI_API_KEY="your-openai-key"' >> ~/.bashrc
-
 source ~/.bashrc
 ```
 ### Windows PowerShell
 ```
 $Env:EMAIL_PASSWORD = "your-app-password"
-
 $Env:GEMINI_API_KEY = "your-gemini-key"
-
-$Env:OPENAI_API_KEY = "your-openai-key"
 ```
 ### .env File
 ```
 EMAIL_PASSWORD=your-app-password
-
 GEMINI_API_KEY=your-gemini-key
-
-OPENAI_API_KEY=your-openai-key
 ```
 
 
@@ -119,7 +107,5 @@ The system manages caches and outputs to save space.
 
 
 ## 📡 API Status
-
-🔵 OpenAI Status → https://status.openai.com
 
 🟢 Google AI Studio Status → https://aistudio.google.com/status
