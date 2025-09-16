@@ -100,13 +100,13 @@ python arxiv_digest.py
 python arxiv_digest.py --daemon
 ```
 ### ⏱️ Schedule (config.py)
-
+```
 DAEMON_CONFIG = {
     "run_hour": 4,
     "run_minute": 0,
     "run_second": 0,
 }
-
+```
 
 
 ## 🛡️ Handling API Errors
