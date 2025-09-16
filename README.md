@@ -45,7 +45,10 @@ pip install arxiv tenacity pydantic httpx python-dateutil google-genai openai ma
 
 ## 🔑 Environment Variables
 
-The Gemini API is used to evaluate and rank papers.
+### Using the Gemini API
+
+The system leverages the Gemini API to evaluate and rank papers. To use this feature, users need to obtain an API key from Google AI Studio. You can sign up and generate your key at [https://aistudio.google.com/](https://aistudio.google.com/). Once you have the key, store it in your environment variables as `GEMINI_API_KEY`. The application will automatically detect and use this key for scoring. If no Gemini API key is provided, the system falls back to using the OpenAI API for paper ranking.
+
 ```
 EMAIL_PASSWORD = your-app-password
 GEMINI_API_KEY = your-gemini-key
