@@ -47,7 +47,9 @@ pip install arxiv tenacity pydantic httpx python-dateutil google-genai openai ma
 
 ### Using the Gemini API
 
-The system leverages the Gemini API to evaluate and rank papers. To use this feature, users need to obtain an API key from Google AI Studio. You can sign up and generate your key at [https://aistudio.google.com/](https://aistudio.google.com/). Once you have the key, store it in your environment variables as `GEMINI_API_KEY`. The application will automatically detect and use this key for scoring. If no Gemini API key is provided, the system falls back to using the OpenAI API for paper ranking.
+The system leverages the Gemini API to evaluate and rank papers.  
+To enable this feature, users must obtain an API key from **Google AI Studio**. You can register and generate your key at [https://aistudio.google.com/](https://aistudio.google.com/).  
+After obtaining the key, save it as an environment variable named `GEMINI_API_KEY`. The application will automatically detect and use this key for paper scoring.
 
 ```
 EMAIL_PASSWORD = your-app-password
