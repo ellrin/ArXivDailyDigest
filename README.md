@@ -132,4 +132,5 @@ The system manages caches and outputs to save space.
 ## 📡 API Status
 
 🔵 OpenAI Status → https://status.openai.com
+
 🟢 Google AI Studio Status → https://aistudio.google.com/status
