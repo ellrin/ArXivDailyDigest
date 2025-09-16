@@ -1,6 +1,6 @@
 # ArXivDailyDigest
 
-**ArXiv Daily Digest** by **Vibe Coding** is an automated system for discovering, scoring, and delivering daily research updates with multi-LLM support. It fetches the latest arXiv papers, filters them by users' chosen interests, scores them with LLMs, and compiles a clean daily digest in both Markdown and PDF. The system uses the Gemini API for paper score ranking. If no papers meet the criteria, users can instead receive a short notification email. The figure below shows an example of the actual output. When running in daemon mode, users can schedule a daily delivery at their specified time, receiving an email that contains both the PDF and Markdown versions of the digest.
+**ArXiv Daily Digest** by **Vibe Coding** is an automated system for discovering, scoring, and delivering daily research updates with LLM support. It fetches the latest arXiv papers, filters them by users' chosen interests, scores them with LLM, and compiles a clean daily digest in both Markdown and PDF. The system uses the Gemini API for paper score ranking. If no papers meet the criteria, users can instead receive a short notification email. The figure below shows an example of the actual output. When running in daemon mode, users can schedule a daily delivery at their specified time, receiving an email that contains both the PDF and Markdown versions of the digest.
 
 
 
@@ -39,7 +39,7 @@ for evidence, novelty, and overall score to enter the digest.
 ## ⚙️ Installation & Setup
 
 ```
-pip install arxiv tenacity pydantic httpx python-dateutil google-genai openai markdown weasyprint
+pip install arxiv tenacity pydantic httpx python-dateutil google-genai  markdown weasyprint
 ```
 
 
