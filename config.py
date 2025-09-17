@@ -19,7 +19,7 @@ DB_FILE = "seen.db"
 
 # Timezone and recency window
 TZ = gettz("Asia/Taipei")
-DAYS_BACK = 1  # how many past days to check
+DAYS_BACK = 2  # how many past days to check
 
 # ArXiv search filters
 CATEGORIES = [
