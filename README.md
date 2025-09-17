@@ -1,6 +1,6 @@
 # ArXivDailyDigest
 
-**ArXiv Daily Digest** by **Vibe Coding** is an automated system for discovering, scoring, and delivering daily research updates with LLM support. It fetches the latest arXiv papers, filters them by users' chosen interests, scores them with LLM, and compiles a clean daily digest in both Markdown and PDF. The system uses the Gemini API for paper score ranking. If no papers meet the criteria, users can instead receive a short notification email. The figure below shows an example of the actual output. When running in daemon mode, users can schedule a daily delivery at their specified time, receiving an email that contains both the PDF and Markdown versions of the digest.
+**ArXiv Daily Digest** by **Vibe Coding** is an automated system for discovering, scoring, and delivering daily research updates with LLM support. I’ve modified the original version to improve usability by separating the configuration into its own module and refining several internal workflows. The system fetches the latest arXiv papers, filters them based on the user’s selected interests, scores them using a large language model, and compiles a clean daily digest in both Markdown and PDF formats. It uses the Gemini API to rank paper relevance. If no paper meets the selection criteria, the user will instead receive a short notification email. The figure below shows an example of the actual output. When running in daemon mode, users can schedule daily delivery at a preferred time and receive both the Markdown and PDF digest by email.
 
 
 
@@ -91,6 +91,47 @@ DAEMON_CONFIG = {
     "run_second": 0,
 }
 ```
+
+### ⚙️ User Configuration (config.py)
+
+All user-editable settings are defined below. You can customize email delivery, scheduling time, timezone, and arXiv search filters. This file controls how the daily ArXiv digest behaves. The scoring mechanism, preferred units, and keyword weightings can also be adjusted here. By default, this config adopts a ChatGPT-5 suggested scoring system, which should be tuned to fit your actual needs.
+
+# Email Settings
+```
+SENDER_EMAIL_ADDRESS = "MAIL_FROM@XXX.com"
+RECIPIENT_EMAIL_ADDRESS = "MAIL_TO@XXX.com"
+SENT_EMAIL_ADDRESS = SENDER_EMAIL_ADDRESS  # Optional alias
+```
+
+# Local Cache
+```
+DB_FILE = "seen.db"  # SQLite file for storing fetched paper records
+```
+
+# Timezone & Date Range
+```
+from dateutil.tz import gettz
+TZ = gettz("Asia/Taipei")  # Timezone for scheduling and filtering
+DAYS_BACK = 2              # Number of days back to fetch new papers
+```
+
+# Daily Run Schedule (for daemon mode)
+```
+DAEMON_CONFIG = {
+    "run_hour": 4,
+    "run_minute": 0,
+    "run_second": 0,
+}
+```
+
+# ArXiv Search Filters
+```
+CATEGORIES = ["CATEGORY1", "CATEGORY2", "CATEGORY3"]
+KEYWORDS = [
+    "KEYWORD1", "KEYWORD2", "KEYWORD3", ...
+]
+```
+
 
 
 ## 🛡️ Handling API Errors
