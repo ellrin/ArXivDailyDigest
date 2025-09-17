@@ -75,47 +75,39 @@ GEMINI_API_KEY=your-gemini-key
 
 ## 🚀 Usage
 
-### ▶️ Single Run
+#### ▶️ Single Run
 ```
 python arxiv_digest.py
 ```
-### 🔁 Daemon Mode
+#### 🔁 Daemon Mode
 ```
 python arxiv_digest.py --daemon
 ```
-### ⏱️ Schedule (config.py)
-```
-DAEMON_CONFIG = {
-    "run_hour": 4,
-    "run_minute": 0,
-    "run_second": 0,
-}
-```
 
-### ⚙️ User Configuration (config.py)
+#### ⚙️ User Configuration (config.py)
 
 All user-editable settings are defined below. You can customize email delivery, scheduling time, timezone, and arXiv search filters. This file controls how the daily ArXiv digest behaves. The scoring mechanism, preferred units, and keyword weightings can also be adjusted here. By default, this config adopts a ChatGPT-5 suggested scoring system, which should be tuned to fit your actual needs.
 
-# Email Settings
+##### Email Settings
 ```
 SENDER_EMAIL_ADDRESS = "MAIL_FROM@XXX.com"
 RECIPIENT_EMAIL_ADDRESS = "MAIL_TO@XXX.com"
 SENT_EMAIL_ADDRESS = SENDER_EMAIL_ADDRESS  # Optional alias
 ```
 
-# Local Cache
+##### Local Cache
 ```
 DB_FILE = "seen.db"  # SQLite file for storing fetched paper records
 ```
 
-# Timezone & Date Range
+##### Timezone & Date Range
 ```
 from dateutil.tz import gettz
 TZ = gettz("Asia/Taipei")  # Timezone for scheduling and filtering
 DAYS_BACK = 2              # Number of days back to fetch new papers
 ```
 
-# Daily Run Schedule (for daemon mode)
+##### Daily Run Schedule (for daemon mode)
 ```
 DAEMON_CONFIG = {
     "run_hour": 4,
@@ -124,7 +116,7 @@ DAEMON_CONFIG = {
 }
 ```
 
-# ArXiv Search Filters
+##### ArXiv Search Filters
 ```
 CATEGORIES = ["CATEGORY1", "CATEGORY2", "CATEGORY3"]
 KEYWORDS = [
